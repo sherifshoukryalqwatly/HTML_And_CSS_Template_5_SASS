@@ -1,0 +1,106 @@
+@use './SASS/helpers/variables' as*;
+@use './SASS/helpers/mixins' as *;
+
+$float-left:right;
+$float-right:left;
+
+$text-right:left;
+$text-left:right;
+
+.the-toggler {
+    left: 15px;
+    right: auto; 
+}
+
+.header {
+    .logo { 
+        @media #{$minMedium} {
+            float: $float-left;
+            text-align: $text-left;
+        }
+    }
+    .navbar {  
+        @media #{$minMedium} {
+            float: $float-left;
+            text-align: $text-left;
+        }
+        li {
+            float: $float-left;
+            @media #{$maxMobile} {
+                text-align: $text-left;
+            }
+        }
+    }
+}
+
+
+// Start Services
+.services {
+    .service-box {
+        float: $float-left;
+        @media #{$minSmall} {
+            float: $float-left;
+        }
+        @media #{$minMedium} {
+            float: $float-left;
+        }
+    } 
+}
+// End Services 
+// Start pleyers
+.our-players {
+    .player-box {
+        float: $float-left;
+        @media #{$minSmall} {
+            float: $float-left;
+        }
+        @media #{$minMedium} {
+            text-align: $text-left;
+        }
+    } 
+}
+// End players 
+// Start imges
+.images {
+    .images-box {
+        float: $float-left;
+        @media #{$minSmall} {
+            text-align: $text-left;
+        }
+    }
+} 
+// End imges 
+
+.footer {
+    .gallery ,.info ,.contact {
+        float: $float-left;
+    }
+    .gallery {
+        .image-box {
+            img {
+                @media #{$minSmall} {
+                    float: $float-left;
+                }
+            }
+            .text {
+                @media #{$minSmall} {
+                    float: $float-left;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        .copyrighttext,
+        .copyrightauther {
+            @media #{$minSmall} {
+                float: $float-left;
+            }
+        }
+        .copyrightauther {
+            @media #{$minSmall} {
+                text-align: $text-right;
+            }
+        }
+    }
+}

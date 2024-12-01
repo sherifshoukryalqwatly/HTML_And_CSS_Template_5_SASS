@@ -1,0 +1,29 @@
+@use '../helpers/variables'as*;
+.head-width-border {
+    position: relative;
+    h2 {
+        background-color: $redColor;
+        color: #FFF;
+        text-align: center;
+        margin: 40px auto;
+        border-radius: 15px;
+        text-transform: uppercase;
+        max-width: 400px;
+        padding: 10px 15px; 
+        @media #{$maxMobile} {
+            width: 300px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            background-color: $grayColor;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }
+    
+}

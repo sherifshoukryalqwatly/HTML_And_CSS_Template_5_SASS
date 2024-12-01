@@ -1,0 +1,155 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/variables' as *;
+
+
+// Start Slider
+.slider {
+    display: block;
+    text-align: center;
+    q{
+        font: {
+            size: 20px;
+            weight: bold;
+            style: italic;
+            family: Tahoma, Arial;
+
+        }
+        display: block;
+        line-height: 1.7;
+        color: #5e5e5e;
+        width: 80%;
+        margin: 30px auto;
+    }
+    img {
+        max-width: 100%;
+    }
+    .bullets {
+        li {
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            background-color: #d1d1d1;
+            border-radius: 50%;
+            transition: 0.3s;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                background-color: #FFF;
+                border: 2px solid #333;
+            }
+        }
+    }
+} 
+// End Slider 
+
+// Start Services
+.services {
+    .service-box {
+        float: $float-left;
+        width: (100% / 3);
+        @media #{$maxMobile} {
+            width: 100%;
+            float: none;
+            i {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+        @media #{$minSmall} {
+            width: 100%;
+            float: $float-left;
+        }
+        @media #{$minMedium} {
+            float: $float-left;
+            width: (100% / 3);
+            padding-right: 20px;
+        }
+        .service-title {
+            color: #666;
+            i {
+                font-size: 35px;
+                position: relative;
+                top: 4px;
+            }
+        }
+        .service-desc {
+            color: #777;
+            line-height: 1.5;
+        }
+        .service-link {
+            color: $redColor;
+            text-decoration: none;
+        }
+    } 
+}
+// End Services 
+// Start pleyers
+.our-players {
+    .player-box {
+        float: $float-left;
+        width: (100% / 5);
+        @media #{$maxMobile} {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        @media #{$minSmall} {
+            width: (100% / 2);
+            float: $float-left;
+            margin-bottom: 40px;
+        }
+        @media #{$minMedium} {
+            width: (100% / 3);
+            text-align: $text-left;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media #{$minLarge} {
+            width: (100% / 5);
+        }
+        .image {
+            max-width: 100%;
+            max-height: 200px;
+        }
+        .player-title {
+            color: #666;
+            font-weight: normal;
+            span {
+                font-weight: bold;
+            }
+        }
+        .player-desc {
+            color: #777;
+            line-height: 1.5;
+        }
+        .player-link {
+            color: $redColor;
+            text-decoration: none;
+        }
+    } 
+}
+// End players 
+// Start imges
+.images {
+    .images-box {
+        float: $float-left;
+        width: (94% / 3);
+        @media #{$maxMobile} {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @media #{$minSmall} {
+            text-align: $text-left;
+            width: (94% / 3);
+            margin-bottom: 0;
+        }
+        &:not(:last-of-type) {
+            margin-right: 3%;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+} 
+// End imges 
